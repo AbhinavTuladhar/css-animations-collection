@@ -1,7 +1,9 @@
 <template>
   <div class="hero-banner">
     <h1 class="title">
-      <span> A Collection of Cool CSS </span>
+      <span> A Collection of </span>
+      <span class="glow"> Cool </span>
+      <span> CSS </span>
       <span>A</span>
       <span>n</span>
       <span>i</span>
@@ -13,7 +15,7 @@
       <span>n</span>
       <span>s</span>
     </h1>
-    <div>Enhance Your Site's Appeal with Eye-Catching Transitions</div>
+    <div>Enhance your Site's Appeal with Eye-Catching Transitions!</div>
   </div>
 </template>
 
@@ -30,20 +32,28 @@
 
 .title {
   font-size: clamp(1.5rem, 0.833rem + 2.963vw, 3.5rem);
+  line-height: 1.25em;
   max-width: 600px;
   text-align: center;
-}
 
-// Select all spans of the h1 tag except the first one
-.title span:not(:first-child) {
-  display: inline-flex;
-  animation: rotating-text 4s ease-in-out infinite both;
-}
-
-@for $index from 2 through 11 {
-  .title span:nth-child(#{$index}) {
-    animation-delay: 0.2s * ($index);
+  span:not(:first-child, :nth-child(2), :nth-child(3)) {
+    display: inline-flex;
+    animation: rotating-text 4s ease-in-out infinite both;
   }
+
+  @for $index from 4 through 13 {
+    span:nth-child(#{$index}) {
+      animation-delay: 0.2s * ($index);
+    }
+  }
+}
+
+.glow {
+  text-shadow:
+    0 0 20px #fff,
+    0 0 30px hsl(225, 73%, 37%),
+    0 0 40px hsl(225, 73%, 37%),
+    0 0 50px hsl(225, 73%, 37%);
 }
 
 @keyframes rotating-text {

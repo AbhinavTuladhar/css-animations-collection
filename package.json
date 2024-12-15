@@ -7,11 +7,34 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
   },
   "dependencies": {
     "nuxt": "^3.14.1592",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^0.7.3",
+    "@nuxt/eslint-config": "^0.7.3",
+    "@vue/typescript-plugin": "^2.1.10",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "yarn run lint:fix",
+      "yarn run format"
+    ]
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="spacing">
     <Header />
-    <main class="content-grid">
+    <main class="content-grid main-content">
       <NuxtPage />
     </main>
   </div>

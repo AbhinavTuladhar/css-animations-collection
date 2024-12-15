@@ -1,0 +1,55 @@
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 0 solid;
+}
+
+body {
+  background-color: #16161d;
+  color: azure;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  transition: all 0.4s ease;
+}
+
+svg {
+  height: 1em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}

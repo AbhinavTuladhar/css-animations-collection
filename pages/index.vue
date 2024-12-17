@@ -4,11 +4,14 @@
       <HeroBanner />
     </section>
     <section class="content-grid">
-      <div class="simple-hovers">
+      <div class="content">
         <HomeSimpleHoverSection />
       </div>
-      <div class="animated-borders">
+      <div class="content">
         <HomeAnimatedBorderGradient />
+      </div>
+      <div class="content">
+        <HomeDoubleAnimatedButtons />
       </div>
     </section>
   </div>
@@ -18,9 +21,8 @@
 const showHero = ref(false);
 </script>
 
-<style scoped lang="scss">
-.simple-hovers,
-.animated-borders {
-  grid-column: content;
+<style lang="scss">
+.landing-page {
+  padding-bottom: 1rem;
 }
 </style>

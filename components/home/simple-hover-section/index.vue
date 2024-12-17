@@ -22,6 +22,15 @@
       <button class="btn slide slide-fancy">
         <span> Slide fancy </span>
       </button>
+      <button class="btn skew skew-from-left">
+        <span> Skew from left</span>
+      </button>
+      <button class="btn skew skew-from-right">
+        <span> Skew from right</span>
+      </button>
+      <button class="btn skew skew-from-centre">
+        <span> Skew from centre</span>
+      </button>
     </div>
   </div>
 </template>
@@ -49,6 +58,12 @@
   border-radius: 4px;
   transition: all 0.4s ease-out;
   cursor: pointer;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 5;
+  }
 }
 
 .scale {
@@ -153,6 +168,40 @@
   &:hover::before {
     transform: scaleX(1);
     transform-origin: left;
+  }
+}
+
+.skew {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: royalblue;
+    width: 150%;
+    height: 100%;
+    transition: all 0.4s ease-out;
+  }
+}
+
+.skew-from-left {
+  &::before {
+    left: -25%;
+    transform: translateX(-100%) skewX(-30deg);
+  }
+
+  &:hover::before {
+    transform: translateX(0) skewX(-30deg);
+  }
+}
+
+.skew-from-right {
+  &::before {
+    right: -25%;
+    transform: translateX(100%) skewX(30deg);
+  }
+
+  &:hover::before {
+    transform: translateX(0) skewX(30deg);
   }
 }
 </style>

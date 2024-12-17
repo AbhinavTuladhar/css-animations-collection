@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-const showHero = ref(true);
+const showHero = ref(false);
 </script>
 
 <style scoped lang="scss">

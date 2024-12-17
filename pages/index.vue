@@ -7,6 +7,9 @@
       <div class="simple-hovers">
         <HomeSimpleHoverSection />
       </div>
+      <div class="animated-borders">
+        <HomeAnimatedBorderGradient />
+      </div>
     </section>
   </div>
 </template>
@@ -16,7 +19,8 @@ const showHero = ref(false);
 </script>
 
 <style scoped lang="scss">
-.simple-hovers {
+.simple-hovers,
+.animated-borders {
   grid-column: content;
 }
 </style>

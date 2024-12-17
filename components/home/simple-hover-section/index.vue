@@ -28,9 +28,6 @@
       <button class="btn skew skew-from-right">
         <span> Skew from right</span>
       </button>
-      <button class="btn skew skew-from-centre">
-        <span> Skew from centre</span>
-      </button>
     </div>
   </div>
 </template>

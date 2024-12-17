@@ -2,7 +2,7 @@
   <div class="hero-banner">
     <h1 class="title">
       <span> A Collection of </span>
-      <span class="glow"> Cool </span>
+      <span class="gradient-text"> Cool </span>
       <span> CSS </span>
       <span>A</span>
       <span>n</span>
@@ -27,7 +27,7 @@
   place-items: center;
   gap: 1rem;
   margin-top: -5rem;
-  padding-top: 15rem;
+  padding-block: 15rem 10rem;
 }
 
 .title {
@@ -46,6 +46,12 @@
       animation-delay: 0.2s * ($index);
     }
   }
+}
+
+.gradient-text {
+  background: linear-gradient(to right, hsl(225, 73%, 37%), hsl(229, 89%, 77%));
+  color: transparent;
+  background-clip: text;
 }
 
 .glow {

@@ -1,5 +1,22 @@
 <template>
   <div class="landing-page">
-    <HeroBanner />
+    <section v-if="showHero">
+      <HeroBanner />
+    </section>
+    <section class="content-grid">
+      <div class="simple-hovers">
+        <HomeSimpleHoverSection />
+      </div>
+    </section>
   </div>
 </template>
+
+<script setup lang="ts">
+const showHero = ref(true);
+</script>
+
+<style scoped lang="scss">
+.simple-hovers {
+  grid-column: content;
+}
+</style>
